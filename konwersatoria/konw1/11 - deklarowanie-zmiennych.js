@@ -77,7 +77,7 @@ const PI = 3.14
 { // początek TDZ dla letVar
     const func = () => console.log(letVar); // 'użyte' przed let-em
 
-    func(); // wewnątrz TDZ
+    // func(); // wewnątrz TDZ
     let letVar = 3; // koniec TDZ
     func(); // już za TDZ
 }
@@ -96,7 +96,7 @@ let empty = undefined
 let empty2 = null
 const user = {
     name: 'rychu',
-    email: undefined
+    email: null
 }
 const json = JSON.stringify(user)
 json

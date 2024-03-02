@@ -28,3 +28,4 @@ const boolean4 = !string1
 const boolean5 = !!string1
 
 // obiekty -  cała reszta. Null:D, Function, Array, Object, Date, Error, RegEx, Symbol
+
