@@ -27,6 +27,8 @@ function start() {
     kulka.addEventListener('touchend', onKulkaTouchEnd)
 }
 function onKulkaTouchStart(ev) {
+    ev.preventDefault()
+    // ev.stopPropagation()
     console.log("Touch start")
     console.log(ev)
     this.classList.add('red')
