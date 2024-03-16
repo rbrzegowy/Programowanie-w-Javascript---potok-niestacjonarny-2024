@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slider</title>
+<style>
+.slider {
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+}
+
+.slides-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slider-controls button, .dots-container .dot {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.dot.active {
+  background-color: black;
+}
+</style>
+</head>
+<body>
+
+<div class="slider">
+  <div class="slides-container">
+    <div class="slide"><img src="jpg/slide1.jpg" alt="w"></div>
+    <div class="slide"><img src="jpg/slide2.jpg" alt="o"></div>
+    <div class="slide"><img src="jpg/slide3.jpg" alt="w"></div>
+  </div>
+</div>
+<div class="slider-controls">
+  <button id="prev">Wstecz</button>
+  <button id="next">Dalej</button>
+</div>
+<div class="dots-container"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.slide');
+  const container = document.querySelector('.slides-container');
+  const dotsContainer = document.querySelector('.dots-container');
+  let currentIndex = 0;
+
+  function updateSlider() {
+    container.style.transform = `translateX(-${100 * currentIndex}%)`;
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentIndex);
+    });
+  }
+
+  slides.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    dot.addEventListener('click', () => {
+      currentIndex = index;
+      updateSlider();
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  updateSlider();
+
+  document.getElementById('prev').addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+    updateSlider();
+  });
+
+  document.getElementById('next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+  });
+});
+</script>
+
+</body>
+</html>
