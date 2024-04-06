@@ -1,3 +1,4 @@
+// notatki z zajęć
 // const sound = document.querySelectorAll('sound')
 const times = []
 
@@ -32,3 +33,13 @@ addEventListener('keypress',(ev)=>{
     sound.play()
     
 })
+
+// wykonanie kodu po określonym czasie
+setTimeout(()=>{
+    console.log('akuku!')
+}, 2_000)
+
+// wykonywanie kodu co określony czas
+const handle = setInterval(()=>{
+    console.log('akuku 2!')
+}, 1_000)
