@@ -1,0 +1,254 @@
+Index: .idea/workspace.xml
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+deleted file mode 100644
+--- a/.idea/workspace.xml	(revision a07a1f2277c3a62ce6ee37b783e78e339e20fddf)
++++ /dev/null	(revision a07a1f2277c3a62ce6ee37b783e78e339e20fddf)
+@@ -1,163 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="AutoImportSettings">
+-    <option name="autoReloadType" value="SELECTIVE" />
+-  </component>
+-  <component name="ChangeListManager">
+-    <list default="true" id="b3f875d7-41c1-482f-9ae6-e41ce84c4b15" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/script.js" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/sounds/boom.wav" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/sounds/clap.wav" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/sounds/hihat.wav" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/sounds/kick.wav" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/sounds/openhat.wav" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/sounds/ride.wav" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/sounds/snare.wav" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/sounds/tink.wav" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/sounds/tom.wav" afterDir="false" />
+-    </list>
+-    <option name="SHOW_DIALOG" value="false" />
+-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-    <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="FileTemplateManagerImpl">
+-    <option name="RECENT_TEMPLATES">
+-      <list>
+-        <option value="HTML File" />
+-        <option value="JavaScript File" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="Git.Settings">
+-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+-      <map>
+-        <entry key="$PROJECT_DIR$" value="main" />
+-      </map>
+-    </option>
+-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-  </component>
+-  <component name="GitHubPullRequestSearchHistory">{
+-  &quot;lastFilter&quot;: {
+-    &quot;state&quot;: &quot;OPEN&quot;,
+-    &quot;assignee&quot;: &quot;Koprowy&quot;
+-  }
+-}</component>
+-  <component name="GithubPullRequestsUISettings">{
+-  &quot;selectedUrlAndAccountId&quot;: {
+-    &quot;url&quot;: &quot;https://github.com/Koprowy/Programowanie-w-Javascript---potok-niestacjonarny-2024.git&quot;,
+-    &quot;accountId&quot;: &quot;ea2eee97-2ee6-4d39-a3f4-b7469b11e095&quot;
+-  }
+-}</component>
+-  <component name="ProjectColorInfo">{
+-  &quot;associatedIndex&quot;: 0
+-}</component>
+-  <component name="ProjectId" id="2fDSmF5UbkgjtzMSvXaueEKRNNP" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+-    <ConfirmationsSetting value="2" id="Add" />
+-  </component>
+-  <component name="ProjectViewState">
+-    <option name="hideEmptyMiddlePackages" value="true" />
+-    <option name="showLibraryContents" value="true" />
+-  </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "DefaultHtmlFileTemplate": "HTML File",
+-    "JavaScript Debug.index.html (1).executor": "Run",
+-    "JavaScript Debug.index.html.executor": "Run",
+-    "JavaScript Debug.slider.html.executor": "Run",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "main",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "C:/Users/kryst/IdeaProjects/Programowanie-w-Javascript---potok-niestacjonarny-2024/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "vue.rearranger.settings.migration": "true"
+-  }
+-}]]></component>
+-  <component name="RecentsManager">
+-    <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\kryst\IdeaProjects\Programowanie-w-Javascript---potok-niestacjonarny-2024\Programowanie-w-Javascript---potok-niestacjonarny-2024\Lab 3 - drumkit" />
+-    </key>
+-    <key name="MoveFile.RECENT_KEYS">
+-      <recent name="C:\Users\kryst\IdeaProjects\Programowanie-w-Javascript---potok-niestacjonarny-2024\Programowanie-w-Javascript---potok-niestacjonarny-2024" />
+-    </key>
+-  </component>
+-  <component name="RunManager" selected="JavaScript Debug.slider.html">
+-    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 2 - slider/index.html" useBuiltInWebServerPort="true">
+-      <method v="2" />
+-    </configuration>
+-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Programowanie-w-Javascript---potok-niestacjonarny-2024/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/index.html" useBuiltInWebServerPort="true">
+-      <method v="2" />
+-    </configuration>
+-    <configuration name="slider.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Programowanie-w-Javascript---potok-niestacjonarny-2024/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 2 - slider/slider.html" useBuiltInWebServerPort="true">
+-      <method v="2" />
+-    </configuration>
+-    <recent_temporary>
+-      <list>
+-        <item itemvalue="JavaScript Debug.slider.html" />
+-        <item itemvalue="JavaScript Debug.index.html (1)" />
+-        <item itemvalue="JavaScript Debug.index.html" />
+-      </list>
+-    </recent_temporary>
+-  </component>
+-  <component name="SharedIndexes">
+-    <attachedChunks>
+-      <set>
+-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+-      </set>
+-    </attachedChunks>
+-  </component>
+-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+-  <component name="TaskManager">
+-    <task active="true" id="Default" summary="Default task">
+-      <changelist id="b3f875d7-41c1-482f-9ae6-e41ce84c4b15" name="Changes" comment="" />
+-      <created>1713334312284</created>
+-      <option name="number" value="Default" />
+-      <option name="presentableId" value="Default" />
+-      <updated>1713334312284</updated>
+-      <workItem from="1713334313459" duration="19000" />
+-      <workItem from="1713334345991" duration="26000" />
+-      <workItem from="1713334381045" duration="49000" />
+-      <workItem from="1713334444150" duration="16000" />
+-      <workItem from="1713334467845" duration="49000" />
+-      <workItem from="1713334530088" duration="19000" />
+-      <workItem from="1713334557219" duration="960000" />
+-      <workItem from="1713335531687" duration="244000" />
+-      <workItem from="1713335783031" duration="196000" />
+-      <workItem from="1713336012704" duration="62000" />
+-      <workItem from="1713378360603" duration="1032000" />
+-    </task>
+-    <servers />
+-  </component>
+-  <component name="TypeScriptGeneratedFilesManager">
+-    <option name="version" value="3" />
+-  </component>
+-  <component name="Vcs.Log.Tabs.Properties">
+-    <option name="TAB_STATES">
+-      <map>
+-        <entry key="MAIN">
+-          <value>
+-            <State>
+-              <option name="FILTERS">
+-                <map>
+-                  <entry key="branch">
+-                    <value>
+-                      <list>
+-                        <option value="HEAD" />
+-                      </list>
+-                    </value>
+-                  </entry>
+-                </map>
+-              </option>
+-            </State>
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/script.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/script.js b/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/script.js
+new file mode 100644
+--- /dev/null	(date 1713380382559)
++++ b/Programowanie-w-Javascript---potok-niestacjonarny-2024/Lab 3 - drumkit/script.js	(date 1713380382559)
+@@ -0,0 +1,73 @@
++// Mapowanie klawiszy na pliki dźwiękowe
++const keyToSound = {
++    '65': 'clap.wav',   // klawisz 'A'
++    '83': 'kick.wav',   // klawisz 'S'
++    '68': 'hihat.wav',  // klawisz 'D'
++    '70': 'tom.wav',    // klawisz 'F', przykładowy dźwięk
++};
++
++// Przechowywanie nagrań
++const channels = [[], [], [], []]; // Załóżmy, że to są nasze kanały
++let currentChannel = 0;
++let isRecording = false;
++let recordingStartTime;
++
++// Inicjalizacja dźwięków
++document.addEventListener('keydown', event => {
++    const key = event.keyCode.toString();
++    if (keyToSound[key]) {
++        playSound(key);
++        if (isRecording) {
++            channels[currentChannel].push({
++                sound: keyToSound[key],
++                time: Date.now() - recordingStartTime
++            });
++        }
++    }
++});
++
++function playSound(keyCode) {
++    const soundFile = keyToSound[keyCode];
++    if (!soundFile) return;
++    const audio = new Audio(`./sounds/${soundFile}`);
++    audio.play();
++    const keyElement = document.querySelector(`div[data-key="${keyCode}"]`);
++    keyElement.classList.add('active');
++    setTimeout(() => keyElement.classList.remove('active'), 200);
++}
++
++function playAllChannels() {
++    channels.forEach(channel => {
++        channel.forEach(note => {
++            setTimeout(() => {
++                playSound(note.sound);
++            }, note.time);
++        });
++    });
++}
++
++// Logika do rozpoczęcia nagrywania
++function startRecording(channel) {
++    isRecording = true;
++    currentChannel = channel;
++    channels[currentChannel] = [];
++    recordingStartTime = Date.now();
++}
++
++// Przykładowe użycie:
++// startRecording(0); // Rozpocznij nagrywanie na kanale 0
++
++// Aby zainicjować interakcję z klawiszami myszy:
++document.getElementById('keys').addEventListener('click', (event) => {
++    const keyElement = event.target;
++    const keyCode = keyElement.dataset.key;
++    if (keyCode) {
++        playSound(keyCode);
++        if (isRecording) {
++            channels[currentChannel].push({
++                sound: keyToSound[keyCode],
++                time: Date.now() - recordingStartTime
++            });
++        }
++    }
++});
