@@ -1,5 +1,5 @@
 ## Ball in the hole
-Narysuj w losowym położeniu na stronie kulkę (okrąg) i dziurę.  
+Narysuj na stronie w losowym położeniu na stronie kulkę (okrąg) i dziurę. Może być zwykły div, może być canvas lub svg - bez znaczenia.  
 Poruszając urządzeniem mobilnym (lub symulując ruch w przeglądarce) naprowadź kulkę do dziury. Zmierz czas, zapisz listę rekordów.
 
 ### Jedna dziurka
