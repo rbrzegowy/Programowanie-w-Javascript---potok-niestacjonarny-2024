@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chrome developer tools</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="text/javascript" src="./main.js"></script>
+    <style>
+      #loader {
+        width: 0px;
+        height: 15px;
+        background-color: lightblue;
+        margin: 10px auto;
+      }
+
+      #csspart {
+        padding: 20px;
+      }
+
+      #buttons {
+        padding: 20px 0;
+      }
+
+      #csspart {
+        margin: 0 auto;
+        padding: 0;
+        background: #ececec;
+      }
+
+      #csspart h1 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="loader"></div>
+    <div id="csspart">
+      <h1>Hello you!</h1>
+      <article>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+        consequuntur quae id qui, velit delectus, dicta neque quo, quasi laborum
+        maxime alias nihil cum ea quos ullam natus odio at?
+      </article>
+      <div id="buttons">
+        <button id="event-listener">Event Listener</button>
+        <button id="rekurencja">Rekurencja</button>
+        <button id="kontekst">Kontekst</button>
+        <button id="xhr">XHR</button>
+        <button id="zmiana-dom">Zmiana w DOM</button>
+        <button id="dom-events">Zdarzenia DOM</button>
+        <button id="long-task">Blokujące zadanie</button>
+        <button id="toggle-loader">Loader</button>
+        <button id="fetch-luke">Fetch Luke</button>
+      </div>
+    </div>
+  </body>
+</html>

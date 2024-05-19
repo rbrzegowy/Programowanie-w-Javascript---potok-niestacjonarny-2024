@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- nope:(, skrypt korzysta z html-a którego jeszcze nie ma -->
+    <!-- <script src="1.js" defer></script>
+    <script src="2.js" defer></script> -->
+
+    <!-- ładowanie script - domyślnie sync, wstrzymuje ładowanie strony, uruchamia js od razu -->
+    <!-- defer - ładuj równolegle z resztą, wykonaj js po parsowaniu strony -->
+    <!-- async - ładuj równolegle z resztą, wykonaj od razu po załadowaniu-->
+
+    <!-- same global context -->
+    <!-- który saveTheWorld odpali -->
+    <!-- 
+    <script src="1.js" defer></script>
+    <script src="2.js" defer></script> -->
+
+    <!-- moduły mają "auto" defer -->
+    <!-- w modułach mamy automatycznie włączony strict mode -->
+    <!-- <script src="./3-with-module.js" type="module"></script> -->
+
+    <!-- bundling:  -->
+    <!-- <script src="./1and2merged.js" type="module"></script> -->
+  </head>
+
+  <body>
+    <button id="btn">Boom-the-world button</button>
+    <div id="box"></div>
+  </body>
+</html>
