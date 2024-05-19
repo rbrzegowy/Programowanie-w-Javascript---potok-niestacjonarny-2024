@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball in the Hole</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+        #records {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<canvas id="gameCanvas" width="600" height="400"></canvas>
+<button onclick="resetGame()">Reset</button>
+<div id="records">
+    <h3>Records</h3>
+    <ul id="recordList"></ul>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
