@@ -22,7 +22,8 @@ X, Y konfigurowalne przez użytkownika.
 4. W miarę jak kulka rośnie jej prędkość zwalnia (gdy maleje - przyspiesza)
 
 ### Przydamisie:
-> Rysowanie koła: ctx.arc().  
+> Pobranie kontekstu: canvas.getContext('2d')  
+Rysowanie koła: ctx.arc().  
 Rysownie linii: ctx.beginPath(), ctx.moveTo(), ctx.lineTo()     
 Wypełnianie/obrysowanie kształtu: ctx.fill(), ctx.stroke()   
 Czyszczenie canvas: ctx.clearRect()
