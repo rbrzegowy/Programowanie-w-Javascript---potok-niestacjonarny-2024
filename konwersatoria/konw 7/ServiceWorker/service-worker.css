@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    background: #444;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#gallery {
+    margin: 100px auto;
+    display: grid;
+    overflow: hidden;
+    width: 70vmax;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#gallery img {
+    width: 100%;
+}
+
+#net-status {
+    color: white;
+    height: 30px;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+}
+
+#status-online {
+    color: lightgreen;
+}
+
+#status-offline {
+    color: lightcoral;
+}
