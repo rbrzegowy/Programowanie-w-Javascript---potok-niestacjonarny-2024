@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Worker</title>
+    <script type="text/javascript" src="service-worker.js"></script>
+    <link rel="stylesheet" href="service-worker.css" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  </head>
+
+  <body>
+    <!-- 
+        ServiceWorker działa niezależnie od karty z widokiem strony, karta (a nawet przeglądarka) mogą być zamknięte:)
+        ServiceWorker działa najcześciej jako:
+        a/ pośrednik (proxy) w ładowaniu strony - obsługuje stronę offline
+        b/ jako element docelowy powiadomień Push API (wysyłanych przez zewnętrzne źródło)
+        c/ jako generator powiadomień dla użytkownika (Notification API)
+        
+        Ograniczenia: tylko na https (z wyłączeniem localhost)
+
+        Cykl życia service workera: ./sw-lifecycle.png ./service-worker-lifecycle.jpg
+
+        // Zasięg działania SW - może być globalny dla origin-a 
+        // lub lokalny do katalogu (wtedy SW musi być w katalogu)
+
+        // Inspekcja: 
+        // sekcja Application DevTools
+        // chrome://inspect/#service-workers
+        // chrome://serviceworker-internals (możliwość debugowanie startu SW)
+
+        RESOURCES:
+        GUIDE 
+        https://www.smashingmagazine.com/2018/11/guide-pwa-progressive-web-applications/
+        https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
+        https://developers.google.com/web/fundamentals/primers/service-workers/
+        https://serviceworke.rs/push-payload_demo.html
+        
+     -->
+    <div id="net-status"></div>
+    <div id="gallery">
+      <img src="img/1.jpg" alt="" />
+      <img src="img/2.jpg" alt="" />
+      <img src="img/3.jpg" alt="" />
+      <img src="img/4.jpg" alt="" />
+      <img src="img/5.jpg" alt="" />
+      <img src="img/6.jpg" alt="" />
+      <img src="img/7.jpg" alt="" />
+      <img src="img/8.jpg" alt="" />
+      <img src="img/9.jpg" alt="" />
+      <img src="img/10.jpg" alt="" />
+      <img src="img/11.jpg" alt="" />
+      <img src="img/12.jpg" alt="" />
+      <img src="img/13.jpg" alt="" />
+      <img src="img/14.jpg" alt="" />
+      <img src="img/15.jpg" alt="" />
+      <img src="img/16.jpg" alt="" />
+      <img src="img/17.jpg" alt="" />
+      <img src="img/18.jpg" alt="" />
+      <img src="img/19.jpg" alt="" />
+      <img src="img/20.jpg" alt="" />
+      <img src="img/21.jpg" alt="" />
+      <img src="img/22.jpg" alt="" />
+      <img src="img/23.jpg" alt="" />
+    </div>
+  </body>
+</html>

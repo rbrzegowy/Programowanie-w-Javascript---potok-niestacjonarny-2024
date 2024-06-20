@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <style>
+      #container {
+        display: flex;
+        flex-direction: column;
+        margin: 40px;
+      }
+    </style>
+    <title>WebWorker</title>
+    <style>
+      #box {
+        width: 100%;
+        min-height: 300px;
+        background: #ececec;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 
+        Worker to skrypt który jest wykonywany w osobnym wątku (można to zobaczyć robiąc breakpointa w głównym wątku:)
+        Osobny wątek nie blokuje głównego wątku w którym zawsze realizowane jest rysowanie DOM aplikacji
+        Blokowanie DOM: https://codepen.io/SitePoint/pen/GzLPJV
+        Rodzaje workerów: Worker, ServiceWorker, SharedWorker
+
+    1. Start workera: w = new Worker(worker.js). Same origin policy lub dataURI zamiast pliku.
+        dataURI = new Worker("data:text/javascript;charset=US-ASCII,onmessage%20%3D%20function%20%28oEvent%29%20%7B%0A%09postMessage%28%7B%0A%09%09%22id%22%3A%20oEvent.data.id%2C%0A%09%09%22evaluated%22%3A%20eval%28oEvent.data.code%29%0A%09%7D%29%3B%0A%7D");
+    2. Najważniejsze eventy nadawane przez obiekt workera: message i  error.
+    4. Zamykanie workera: w.terminate() (lub close() z poziomu workera)
+    5. Komunikacja worker->main: postMessage(msg). Dane są kopiowane, nie ma referencji. 
+        W przypadku dużych ilości danych -> Transferrable Objects
+    6. Worker ma swój Global context (DedicatedWorkerGlobalScope zamiast Window)
+    7. Można utworzyć wiele workerów (również z tego samego pliku)
+    8. Worker jest zatrzymywany przy wyjściu/reload strony
+    9. Workers nie jest zatrzymywany ani spowalniany gdy strona traci focus
+    9. Z poziomu workera nie mamy dostępu do wszystki API:
+    https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
+        Najważniejsze: nie ma obiektu document, nie ma Storage
+    10. Można ładować zewnętrzne skrypty z workera: importScripts('./someScript.js');
+    MDN: https://developer.mozilla.org/pl/docs/Web/Guide/Performance/Uzycie_web_workers
+
+    -->
+    <!--Ale na co to komu (source: html5rocks.com)
+        Prefetching/caching danych
+        Wymagające obliczeniowo operacje (audio/video/ai etc)
+        Komunikacja z serwerem w tle 
+        Serwowanie wielu usługom danych z API typu GPS/Gyro       
+        Obsługa offline(ServiceWorker)
+        Obsługa powiadomień Notification z akcjami (ServiceWorker)
+        Obsługa powiadomień Push (ServiceWorker)
+    -->
+    <!--
+        Debugowanie:
+        1. Jak zwykły JS (worker)
+        2. Developer tools->Application (ServiceWorker)
+        3. chrome://inspect (shared workers, service workers)
+    -->
+
+    <!-- 
+        Gdy chcesz przekazać duże ilości danych: Transferrable Objects
+       Lista TO: https://developer.mozilla.org/en-US/docs/Glossary/Transferable_objects#supported_objects
+
+        TO to obiekty które są "transferowane" pomiędzy różnymi kontekstami - czyli są dostępne tylko w jednym kontekście w danym czasie
+       W komunikacji Main<->Worker często wykorzystujemy ArrayBuffer (jest to jeden z TO)
+       1. Źródło: tablica arrayBuffer po post będzie pusta, literally 'transferred'
+        2. worker.postMessage(data, arrayItems);
+        3. arrayItems to zawsze talica obiektów ArrayBuffer
+        4. window.postMessage(arrayBuffer, targetOrigin, [arrayBuffer]); 
+
+        // structuredClone(), przykład z MDN
+        // 16MB = 1024 * 1024 * 16
+        const uInt8Array = Uint8Array.from({ length: 1024 * 1024 * 16 }, (v, i) => i);
+        console.log('Before transfer source array size:', uInt8Array.byteLength, { uInt8Array });
+        
+        const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] });
+        console.log('After transfer: ', uInt8Array.byteLength, { uInt8Array, transferred });
+ 
+    -->
+
+    <div id="container">
+      <button type="button" class="btn btn-default" id="add-worker">
+        Add WebWorker
+      </button>
+      <div id="box"></div>
+    </div>
+    <script type="text/javascript">
+      // 16MB = 1024 * 1024 * 16
+      //   const uInt8Array = Uint8Array.from({ length: 1024 * 1024 * 16 }, (v, i) => i);
+      // console.log('Before transfer source array size:', uInt8Array.byteLength, { uInt8Array });
+
+      //   const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] });
+      // console.log('After transfer: ', uInt8Array.byteLength, { uInt8Array, transferred })
+
+      const workers = []
+      const hash = Math.random() * 1000
+      let isCounterActive = false
+
+      app()
+
+      function app() {
+        listenToNewWorkerButton()
+      }
+
+      function listenToNewWorkerButton() {
+        document.querySelector('#add-worker').addEventListener('click', () => {
+          createWorker()
+          // showBlockingModal()
+          logCounterToConsole()
+        })
+      }
+      function showBlockingModal() {
+        setTimeout(() => alert('wisimy...'), 3000)
+      }
+      function createWorker() {
+        const worker = new Worker('./worker.js')
+        worker.addEventListener('message', onWorkerMessage)
+        workers.push(worker)
+      }
+
+      function onWorkerMessage(e) {
+        document.querySelector('#box').innerHTML =
+          e.data + '<br>' + document.querySelector('#box').innerHTML
+      }
+      function logCounterToConsole() {
+        if (isCounterActive) {
+          return
+        }
+        setInterval(() => {
+          console.count('timer')
+        }, 100)
+        isCounterActive = true
+      }
+    </script>
+  </body>
+</html>

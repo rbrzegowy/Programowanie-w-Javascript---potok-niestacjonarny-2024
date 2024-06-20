@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWorker &amp; Camera</title>
+    <script src="webworker-camera.js" type="module"></script>
+    <style>
+        video {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="with-worker">Użyj Workera do obróbki video</label>
+        <input type="checkbox" name="with-worker" id="with-worker">
+        <div>Zobacz FPS przy włączonym/wyłączonym workerze. Popatrz też jakie opóźnienie ma obraz dla włączonego Workera
+        </div>
+    </div>
+    <video></video>
+    <canvas width="800" height="600" id="source"></canvas>
+    <canvas width="800" height="600" id="target"></canvas>
+</body>
+
+</html>
