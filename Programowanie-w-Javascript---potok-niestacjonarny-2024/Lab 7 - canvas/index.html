@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacja Kulek</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        .controls label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="controls">
+    <label for="numBalls">Liczba kulek (X):</label>
+    <input type="number" id="numBalls" value="10">
+    <label for="distance">Odległość (Y):</label>
+    <input type="number" id="distance" value="100">
+    <button id="start">Start</button>
+    <button id="reset">Reset</button>
+</div>
+<canvas id="canvas" width="800" height="600"></canvas>
+<script src="index.js"></script>
+</body>
+</html>
