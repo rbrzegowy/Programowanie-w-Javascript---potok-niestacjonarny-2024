@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web Animation API</title>
+    <style>
+      main {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        right: 50px;
+        bottom: 50px;
+        background: #ccc;
+      }
+
+      main div {
+        background: #555;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+
+      #box {
+        top: 20px;
+        left: 100px;
+        animation: box-animation infinite ease-in-out 2s alternate;
+      }
+
+      #box2 {
+        top: 20px;
+        left: 600px;
+      }
+
+      @keyframes box-animation {
+        0% {
+          transform: translate(0, 0);
+        }
+
+        100% {
+          transform: translate(0, 400px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div id="box"></div>
+      <div id="box2"></div>
+    </main>
+    <div id="message"></div>
+    <button id="pause-animation">Pause anim</button>
+    <script src="web-animation-api.js"></script>
+  </body>
+</html>

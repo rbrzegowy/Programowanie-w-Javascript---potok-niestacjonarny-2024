@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Camera fun</title>
+    <script src="magiccamera.js"></script>
+    <style>
+        body {
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btnPhoto">Capture photo</button>
+    <input type="color" id="color-picker">
+    <input type="range" min="0" max="100" value="10" id="filter-strength">
+    <canvas id="magicCanvas"></canvas>
+    <video id="player" controls></video>
+    <a id="photoLink">
+        <img src="" alt="" id="photo">
+    </a>
+</body>
+
+</html>
