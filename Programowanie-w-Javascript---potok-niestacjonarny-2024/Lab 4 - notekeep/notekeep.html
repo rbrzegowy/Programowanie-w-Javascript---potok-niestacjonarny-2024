@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>NotePocket - Zarządzanie Notatkami</title>
+</head>
+<body>
+<h1>NotePocket</h1>
+<form id="noteForm">
+    <input type="text" id="title" placeholder="Tytuł notatki" required><br>
+    <textarea id="content" placeholder="Treść notatki" required></textarea><br>
+    <input type="color" id="color" value="#ff0000"><br>
+    <label><input type="checkbox" id="pin"> Przypnij notatkę</label><br>
+    <button type="submit">Dodaj notatkę</button>
+</form>
+<table id="notesTable">
+    <thead>
+    <tr>
+        <th>Tytuł</th>
+        <th>Treść</th>
+        <th>Kolor</th>
+        <th>Przypięte</th>
+        <th>Data utworzenia</th>
+    </tr>
+    </thead>
+    <tbody id="notesContainer">
+    <!-- Notatki zostaną tutaj dodane -->
+    </tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
